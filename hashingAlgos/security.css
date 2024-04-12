@@ -1,0 +1,82 @@
+.jumbotron {
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 5%;
+    background-color: #555; /* Dark gray background */
+    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-family: 'Poppins', sans-serif; /* Poppins font */
+    font-size: 20px;
+    color: #fff; /* White text color */
+}
+
+.display-4 {
+    color: #fff; /* White text color */
+    text-align: center;
+}
+
+.my-4 {
+    border-color: #fff; /* White border color */
+}
+
+.lead {
+    color: #fff; /* White text color */
+}
+
+* {
+    color: #fff; /* White text color */
+    font-family: 'Poppins', sans-serif; /* Poppins font */
+}
+
+select,
+option {
+    background-color: #222; /* Dark gray background for select dropdown */
+    color: #fff; /* White text color */
+}
+
+body {
+    background-color: #222; /* Dark gray background */
+}
+
+.frame-details {
+    padding-left: 20%;
+}
+
+input {
+    background-color: #333; /* Dark gray background for input */
+    box-shadow: none;
+    color: #fff; /* White text color */
+}
+
+button,
+input[type="button"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    background-color: #4caf50; /* Green button background */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #66cd66; /* Lighter green shade on hover */
+}
+
+.textbox {
+    background: #fff; /* White background for text area */
+    border: 1px double #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #333;
+    color: #666; /* Gray text color */
+    outline: none;
+    height: 100px;
+    width: 350px;
+}
+
+.hasher {
+    padding-left: 20%;
+}
