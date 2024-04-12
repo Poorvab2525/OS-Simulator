@@ -41,7 +41,7 @@ var res,pro;
                         $item = document.createElement('div');
                         $item.style.margin = '10px';
                         $field = document.createElement('label');
-                        $field.innerHTML = 'Need for process '+$i+' Res: ' +$j;
+                        $field.innerHTML = 'Max for process '+$i+' Res: ' +$j;
 					    $item.appendChild($field);
                         $field = document.createElement('input');
                         $field.name = 'Design[' + $i + ']';
@@ -127,16 +127,18 @@ var res,pro;
 						{
 							for(var j = 0; j < res; j++)
 							{
-								avail[j] = avail[j] - alloc[i][j];
+								//avail[j] = avail[j] - alloc[i][j];
 								needy[i][j] = needy[i][j] - alloc[i][j];
 							}
 						}
 						console.log('avail: ' + avail);
-						//TABLE for NEED
+
+						
+						//TABLE for MAX
 						var tab_need = document.getElementById("tab_need");
 						var row = tab_need.insertRow(0);
 						var cell = row.insertCell(0);
-						cell.innerHTML = "<b>Need</b>";
+						cell.innerHTML = "<b>Max</b>";
                         var pro_head = tab_need.insertRow(1);
                         var cell = pro_head.insertCell(0);
                         cell.innerHTML = "<b>Process</b>";
@@ -180,6 +182,34 @@ var res,pro;
 								cell.innerHTML = alloc[i][j];
 							}
 						}
+
+						//TABLE for NEED
+						var tab_needd = document.getElementById("tab_needd");
+						var row = tab_needd.insertRow(0);
+						var cell = row.insertCell(0);
+						cell.innerHTML = "<b>Need</b>";
+                        var pro_head = tab_needd.insertRow(1);
+                        var cell = pro_head.insertCell(0);
+                        cell.innerHTML = "<b>Process</b>";
+                        for(i=1;i<=res;i++)
+                        {
+                            cell = pro_head.insertCell(i);
+                            cell.innerHTML = "<b>Res "+(i-1)+"</b>";
+                        }
+						for(i=0;i<pro;i++)
+						{
+							var row = tab_needd.insertRow(i+2);
+                            var cell = row.insertCell(0);
+                            cell.innerHTML = "<b>P"+i+"</b>";
+							for(j=0;j<res;j++)
+							{
+								var cell = 	row.insertCell(j+1);
+								cell.innerHTML = ned[res*i+j] - alloc[i][j];
+							}
+						}
+
+
+						//
                         var prints = document.getElementById("printing");
 						var i,j;
 						var exec = 0; //Number of executed processes
